@@ -5,42 +5,45 @@
   <head>
     <title>HMJE G1C2FA Project</title>
   </head>
-<script>
 
-function printClock() {
+    <body onload="printClock()">
+            <div style="border:1px solid #dedede00; width:500px; height:250px; line-height:250px; color:#ffffff; font-size:100px; text-align:center; float: right; margin-right: 40px; margin-top: 40px;" id="clock"></div>
+            <script>
     
-    var clock = document.getElementById("clock");            // 출력할 장소 선택
-    var currentDate = new Date();                                     // 현재시간
-    var calendar = currentDate.getFullYear() + "-" + (currentDate.getMonth()+1) + "-" + currentDate.getDate() // 현재 날짜
-    var amPm = 'AM'; // 초기값 AM
-    var currentHours = addZeros(currentDate.getHours(),2); 
-    var currentMinute = addZeros(currentDate.getMinutes() ,2);
-    var currentSeconds =  addZeros(currentDate.getSeconds(),2);
-    
-    if(currentHours >= 12){ // 시간이 12보다 클 때 PM으로 세팅, 12를 빼줌
-    	amPm = 'PM';
-    	currentHours = addZeros(currentHours - 12,2);
-    }
-
-    if(currentSeconds >= 50){// 50초 이상일 때 색을 변환해 준다.
-       currentSeconds = '<span style="color:#de1951;">'+currentSeconds+'</span>'
-    }
-    clock.innerHTML = currentHours+":"+currentMinute+":"+currentSeconds +" <span style='font-size:50px;'>"+ amPm+"</span>"; //날짜를 출력해 줌
-    
-    setTimeout("printClock()",1000);         // 1초마다 printClock() 함수 호출
-}
-
-function addZeros(num, digit) { // 자릿수 맞춰주기
-	  var zero = '';
-	  num = num.toString();
-	  if (num.length < digit) {
-	    for (i = 0; i < digit - num.length; i++) {
-	      zero += '0';
-	    }
-	  }
-	  return zero + num;
-}
-  </script>
+                function printClock() {
+                    
+                    var clock = document.getElementById("clock");            // 출력할 장소 선택
+                    var currentDate = new Date();                                     // 현재시간
+                    var calendar = currentDate.getFullYear() + "-" + (currentDate.getMonth()+1) + "-" + currentDate.getDate() // 현재 날짜
+                    var amPm = 'AM'; // 초기값 AM
+                    var currentHours = addZeros(currentDate.getHours(),2); 
+                    var currentMinute = addZeros(currentDate.getMinutes() ,2);
+                    var currentSeconds =  addZeros(currentDate.getSeconds(),2);
+                    
+                    if(currentHours >= 12){ // 시간이 12보다 클 때 PM으로 세팅, 12를 빼줌
+                        amPm = 'PM';
+                        currentHours = addZeros(currentHours - 12,2);
+                    }
+                
+                    if(currentSeconds >= 50){// 50초 이상일 때 색을 변환해 준다.
+                       currentSeconds = '<span style="color:#F5DF4D;">'+currentSeconds+'</span>'
+                    }
+                    clock.innerHTML = currentHours+":"+currentMinute+":"+currentSeconds +" <span style='font-size:50px;'>"+ amPm+"</span>"; //날짜를 출력해 줌
+                    
+                    setTimeout("printClock()",1000);         // 1초마다 printClock() 함수 호출
+                }
+                
+                function addZeros(num, digit) { // 자릿수 맞춰주기
+                      var zero = '';
+                      num = num.toString();
+                      if (num.length < digit) {
+                        for (i = 0; i < digit - num.length; i++) {
+                          zero += '0';
+                        }
+                      }
+                      return zero + num;
+                }
+            </script>
   <body text="black" background="https://raw.githubusercontent.com/hunminjeungum/JIN1/main/WALL3.jpg" bgproperties="fixed" link="red" vlink="blue" alink="orange">
     <div align=center><h1>잠신중 1-2 수행평가 파일 테스트 용 웹페이지(1-2와 상관없는 장소에 배포X)</h1>
       <a href="https://hunminjeungum.github.io/JIN1/Data.html">
@@ -70,13 +73,10 @@ function addZeros(num, digit) { // 자릿수 맞춰주기
       <a href="https://hunminjeungum.github.io/JIN1/Data.html">
         <img src="ENG (사용자 지정) (2).png"style= " width:250px; height:250px; border-radius: 30px; margin-left: 30px"/>
       </a>
+	</script>
     </div>
     <br><br><br><br><br>
-    <h6>Developed By</h6><h2>HMJE</h2>
-    <h6>YH.Song&YJ.Lim</h6>
-    <h6>If you want to Develop with us email us By clicking <a href="mailto:yihyunsong@outlook.com">here</a></h6>
-    <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
+	      <script type="text/javascript">
       var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
       (function(){
       var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
@@ -86,7 +86,12 @@ function addZeros(num, digit) { // 자릿수 맞춰주기
       s1.setAttribute('crossorigin','*');
       s0.parentNode.insertBefore(s1,s0);
     })();
-    </script>
+    <h6>Developed By</h6><h2>HMJE</h2>
+    <h6>YH.Song&YJ.Lim</h6>
+    <h6>If you want to Develop with us email us By clicking <a href="mailto:yihyunsong@outlook.com">here</a></h6>
+    <!--Start of Tawk.to Script-->
+  
+  
     <!--End of Tawk.to Script-->
   </body>
 </html>
