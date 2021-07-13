@@ -7,5 +7,7 @@ password = prompt("비밀번호");
     }else{
 
       alert(':( You do not have permission to view this site');
+      window.location.href='http://www.codingfactory.net/';
+
 
     }
