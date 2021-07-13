@@ -24,11 +24,6 @@
                 function showRemaining() { 
                     var now = new Date();
                     var distDt = _vDate - now;
-
-                    if (distDt < 60)
-                        distDt = '<span style="color:#F5DF4D;">'+distDt+'</span>'
-                    if (distDt < 10)
-                        distDt = '<span style="color:#ff0000;">'+distDt+'</span>'
                     if (distDt < 0) { 
                         clearInterval(timer); 
                         document.getElementById(id).textContent = '해당 이벤트가 종료 되었습니다!';
