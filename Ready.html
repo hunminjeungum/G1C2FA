@@ -7,6 +7,7 @@
         <div align=center>
             <h1>G1C2FileArchive Is Ready!!</h1>
         </div>
+        <br><br>
         <div align=center>
             <h1>Countdown To Open</h1> 
             <h2 id="sample01"></h2>
@@ -23,7 +24,11 @@
                 function showRemaining() { 
                     var now = new Date();
                     var distDt = _vDate - now;
-                
+
+                    if (distDt < 60)
+                        distDt = '<span style="color:#F5DF4D;">'+distDt+'</span>'
+                    if (distDt < 10)
+                        distDt = '<span style="color:#ff0000;">'+distDt+'</span>'
                     if (distDt < 0) { 
                         clearInterval(timer); 
                         document.getElementById(id).textContent = '해당 이벤트가 종료 되었습니다!';
@@ -47,7 +52,7 @@
             var dateObj = new Date(); 
             dateObj.setDate(dateObj.getDate() + 1); 
             
-            countDownTimer('sample01', '04/01/2024 00:00 AM'); // 2024년 4월 1일까지, 시간을 표시하려면 01:00 AM과 같은 형식을 사용한다. 
+            countDownTimer('sample01', '07/13/2021 11:20 AM'); // 2024년 4월 1일까지, 시간을 표시하려면 01:00 AM과 같은 형식을 사용한다. 
         </script>
     </body>
 </html>
