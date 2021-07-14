@@ -1,4 +1,4 @@
-password = prompt("비밀번호");
+password = prompt("Student authentication");
 
     if(password==1111){
 
