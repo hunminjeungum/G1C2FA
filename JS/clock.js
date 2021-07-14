@@ -1,5 +1,3 @@
-<script>
-
 function printClock() {
     
     var clock = document.getElementById("clock");            // 출력할 장소 선택
