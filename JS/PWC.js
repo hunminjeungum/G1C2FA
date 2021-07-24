@@ -1,6 +1,7 @@
 password = prompt("Student authentication");
 
-    if(password=='jin1 success'){
+    if(password=='1-2반 최고 ')
+    {
 
       alert(':) Confirmed that you are a student with permission to view this site.');
 
