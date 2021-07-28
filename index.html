@@ -13,7 +13,7 @@
     </style>
   </head>
   <body text="black" background="./IMG/milky-way-2695569_1920.jpg" bgproperties="fixed" link="red" vlink="blue" alink="orange";></body>
-	  <img src="CN LOGO.png" style ="height:5%; width:5%;">  
+	  <img src="CN LOGO.png" align=center style ="height:5%; width:5%;">  
     <!--PW Code Start-->
     <script type="text/javascript" src='./JS/PWC.js'></script>
     <!--End-->
@@ -93,27 +93,21 @@
     </script> 
     <style type="text/css"> 
       #load {
-        width: 100%; 
-        height: 100%; 
+        position: fixed; 
         top: 0; 
         left: 0; 
-        position: fixed; 
-        display: block; 
-        opacity: 0.8; 
-        background: white; 
-        z-index: 99; 
-        text-align: center; 
-      } 
-      #load > img { 
-        position: absolute; 
-        top: 50%; 
-        left: 50%; 
-        z-index: 100; 
-      } 
+        right: 0; 
+        bottom: 0;  
+        -webkit-filter: blur(5px); 
+        -moz-filter: blur(5px); 
+        -o-filter: blur(5px); 
+        -ms-filter: blur(5px); 
+        filter: blur(5px); 
+        transform: scale(1.02); 
+        z-index: -1; 
+        content: "";
+      }
     </style> 
-    <div id="load" align=center> 
-      <img src="./IMG/Loading.gif" alt="loading" align=middle> 
-    </div>
     <!-- Loading-->
     <!--Modal Popup-->
     <!--popup_type_mod_other subjects-->
@@ -135,10 +129,10 @@
   
       /* Modal Content/Box */
       .modal-content {
-          background-color: #fefefe;
+          background-color: #1d1d1d;
           margin: 15% auto; /* 15% from the top and centered */
           padding: 20px;
-          border: 1px solid #888;
+          border: 1px solid rgb(56, 56, 56);
           width: 30%; /* Could be more or less, depending on screen size */                          
       }
     </style>
@@ -182,8 +176,8 @@
             <img src="./ico/korean.png"style= " width:140px; height:140px; border-radius: 30px; margin-left:10px"/>
           </a>
         </p>
-        <div style="cursor:pointer;background-color:#DDDDDD;text-align: center;padding-bottom: 10px;padding-top: 10px;" onClick="close_pop();">
-          <span class="pop_bt" style="font-size: 13pt;" >
+        <div style="cursor:pointer;background-color:#3b3b3b;text-align: center;padding-bottom: 10px;padding-top: 10px;" onClick="close_pop();">
+          <span class="pop_bt" style="font-size: 13pt; color:rgb(225,225,225);">
             닫기
           </span>
         </div>
